@@ -16,7 +16,7 @@ const SkillsSection = ({ id }) => {
     {
       id: 2,
       title: "Siber Güvenlik Takım Kaptanı",
-      company: "Balıkesir Teknopark",
+      company: "Balıkesir Teknokent",
       period: "10/2024 - Şu An",
       icon: <FaUsers />,
       description: "Siber güvenlik ekibinin koordinasyonu ve sızma testlerinin gerçekleştirilmesi.",
