@@ -1,0 +1,144 @@
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), 0 0 10px rgba(100, 255, 218, 0.2);
+  border-bottom: 1px solid rgba(100, 255, 218, 0.2);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.navbar-logo {
+  color: #00FF00;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+  letter-spacing: 1px;
+}
+
+.logo-text {
+  margin-left: 8px;
+}
+
+.menu-icon {
+  display: none;
+  color: var(--text-color);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+}
+
+.nav-item {
+  height: 80px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 8px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 25px;
+  left: 50%;
+  background-color: #00FF00;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover {
+  color: #00FF00;
+  text-shadow: 0 0 8px rgba(0, 255, 0, 0.8);
+}
+
+.nav-link:hover::after {
+  width: 70%;
+}
+
+@media screen and (max-width: 960px) {
+  .navbar-container {
+    padding: 0 30px;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.95);
+    border-top: 1px solid rgba(0, 255, 0, 0.2);
+  }
+
+  .nav-menu.active {
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-item {
+    height: auto;
+    padding: 20px;
+    width: 100%;
+    display: table;
+    text-align: center;
+  }
+
+  .nav-link {
+    padding: 15px;
+    width: 100%;
+    display: table;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+} 

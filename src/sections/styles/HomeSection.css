@@ -1,0 +1,85 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.home-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.highlight {
+  color: var(--secondary-color);
+}
+
+.home h2 {
+  font-size: 2rem;
+  color: var(--darker-text);
+  margin-bottom: 25px;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.primary-button {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.secondary-button {
+  background-color: transparent;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .home h1 {
+    font-size: 2.5rem;
+  }
+  
+  .home h2 {
+    font-size: 1.5rem;
+  }
+  
+  .intro-text {
+    font-size: 1.1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+} 
